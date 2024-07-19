@@ -19,11 +19,8 @@ main {
 	height: 9;
 }
 
-.user-profile_img {
-	width: 100%;
-}
 
-.user-profile_img img {
+.main-user_img img {
 	width: 15%;
 }
 
@@ -44,6 +41,35 @@ main {
 
 .notifications-text h6,p {
 	font-size: 12px;
+}
+
+.other-user {
+	width: 100%;
+	border-bottom: 1px solid lightgray;
+}
+
+.other-user-left {
+	width: 20%;
+	background-color: blueviolet;
+}
+
+.other-user_img img {
+	width: 70%;
+}
+
+.other-user-middle {
+	width: 60%;
+	background-color: chartreuse;
+}
+
+.other-user-middle p {
+	color: lightgray;
+}
+
+.other-user-right {
+	width: 20%;
+	background-color: gold;
+	text-align: right;
 }
 
 .blue {
