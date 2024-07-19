@@ -27,6 +27,25 @@ main {
 	width: 15%;
 }
 
+.notifications {
+	background-color: darkturquoise;
+}
+
+.bell-icon {
+	height: 40px;
+	width: 13%;
+}
+
+.bell-icon i {
+	color: darkturquoise;
+	font-size: 18px;
+
+}
+
+.notifications-text h6,p {
+	font-size: 12px;
+}
+
 .blue {
 	background-color: blue;
 }

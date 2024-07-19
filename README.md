@@ -195,4 +195,9 @@ status: 'received'
 ]
 
 /*SOLUZIONE*/
-- creo per prima cosa una struttura rigida dell'esercizio all'intero di index.html;
+1 creo per prima cosa una struttura rigida dell'esercizio all'intero di index.html;
+1.2 creo un container che dividerò successivamente in due col. Nella col di sinistra (col-4) creo una sezione dedicata agli utenti e la col di destra conterrà le chat;
+1.2.1 creo un div deicato all'utente principale (Sofia);
+1.2.2 creo un div dedicato alle opzioni riguardanti le notifiche;
+1.2.3 creo un div contenente un barra della ricerca;
+1.2.4 creo un div contenente una lista degli utenti coinvolti nelle chat (tutti tranne Sofia visto che è l'utente che sta "visualizzando" boolzapp);

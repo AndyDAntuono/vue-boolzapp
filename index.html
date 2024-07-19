@@ -13,23 +13,44 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex  mt-3 bg-white">
+                    <!--Suddivido il container in due col-->
                     <div class="col-4">
+                        <!--Nella user section inserirò tutti i div che hann che fare con gli utenti di boolzapp-->
                         <div class="user-section">
-                            <div class="main-user d-flex">
-                                <div class="user-profile_img w-75">
+                            <!--Questo div a che fare con il main-user, ovvero Sofia in questo caso-->
+                            <div class="main-user d-flex align-items-center">
+                                <div class="user-profile_img w-75 ms-1">
                                     <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
                                     Sofia
                                 </div>
-                                <div class="users-icons w-25 d-flex justify-content-evenly ">
+                                <div class="users-icons w-25 d-flex justify-content-evenly align-items-center">
                                     <i class="fa-solid fa-circle-notch"></i>
                                     <i class="fa-solid fa-message"></i>
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </div>
                             </div>
-                            <div class="notifications"></div>
-                            <div class="src-user">
-                                <input type="search" name="" id="">
+                            <!--div contenente le opzioni sulle notifiche-->
+                            <div class="notifications py-2 d-flex align-items-center">
+                                <div class="bell-icon rounded-circle bg-white ms-1 d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-regular fa-bell-slash"></i>
+                                </div>
+                                <div class="notifications-text ms-3">
+                                    <h6>Ricevi notifiche di nuovi messaggi</h6>
+                                    <p><a href="">Attiva notifiche desktop</a></p>
+                                </div>
                             </div>
+                            <!--div contenente la barra della ricerca-->
+                            <div class="src-user">
+                                <nav class="navbar bg-light">
+                                    <form class="container-fluid">
+                                      <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">&#x1F50E;&#xFE0E;</span>
+                                        <input type="search" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                      </div>
+                                    </form>
+                                </nav>
+                            </div>
+                            <!--div contenente la lista degli altri utenti-->
                             <div class="users-list">
                                 <div class="user">Utente1</div>
                                 <div class="user">Utente2</div>
