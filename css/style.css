@@ -14,11 +14,13 @@ main {
 	height: 90vh;
 }
 
-.user-section {
-	background-color: red;
-	height: 9;
+.main-user {
+	background-color: lightgray;
 }
 
+.users-icons i {
+	color: dimgray;
+}
 
 .main-user_img img {
 	width: 15%;
@@ -45,12 +47,11 @@ main {
 
 .other-user {
 	width: 100%;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1px solid gray;
 }
 
 .other-user-left {
 	width: 20%;
-	background-color: blueviolet;
 }
 
 .other-user_img img {
@@ -59,17 +60,16 @@ main {
 
 .other-user-middle {
 	width: 60%;
-	background-color: chartreuse;
 }
 
 .other-user-middle p {
-	color: lightgray;
+	color: gray;
 }
 
 .other-user-right {
 	width: 20%;
-	background-color: gold;
 	text-align: right;
+	color: gray;
 }
 
 .blue {
