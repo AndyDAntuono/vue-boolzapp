@@ -203,4 +203,6 @@ status: 'received'
 3.3 creo un div contenente un barra della ricerca;
 3.4 creo un div contenente una lista degli utenti coinvolti nelle chat (tutti tranne Sofia visto che è l'utente che sta "visualizzando" boolzapp);
 4 nel col di destra del container principale creo una sezione dedicata alla chat
-4.1 creo div dell'iterlocutore (ho preferito creare un altro div anziché usare div utenti per evitare confusione anche se in questo momento non so come questa mia scelta possa influire sul strutturazione del vue)
+4.1 creo div dell'iterlocutore (ho preferito creare un altro div anziché usare div utenti per evitare confusione anche se in questo momento non so come questa mia scelta possa influire sul strutturazione del vue);
+4.2 creo um div che conterrà il dialogo tra l'utente principale e gli atri utenti
+4.3 creo un div che conterrà l'editor(?) dei messaggi eseguibili dall'utente principale;

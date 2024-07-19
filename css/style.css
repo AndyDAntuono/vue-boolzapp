@@ -14,7 +14,7 @@ main {
 	height: 90vh;
 }
 
-.main-user, .interlocutor {
+.main-user, .interlocutor, .chat-bottom {
 	background-color: lightgray;
 }
 
@@ -101,3 +101,20 @@ main {
 	width: 15%;
 }
 
+.dialogue {
+	/*imposto un altezza fissa SOLO per farmi un idea di quanto spazio dovrà occupare il div dialogue*/
+	height: 500px;
+	background-image: url(../img/mine.jpg);
+}
+
+.chat-bottom {
+	width: 100%;
+}
+
+.chat-bottom-left, .chat-bottom-right {
+	width: 10%;
+}
+
+.chat-bottom-middle {
+	width: 80%;
+}
