@@ -19,7 +19,7 @@
                         <div class="user-section">
                             <!--Questo div a che fare con il main-user, ovvero Sofia in questo caso-->
                             <div class="main-user w-65 py-2 d-flex align-items-center">
-                                <div class="main-user_img ms-1 d-flex align-items-center">
+                                <div class="main-user_pic ms-1 d-flex align-items-center">
                                     <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
                                     <h6 class="ms-1">Sofia</h6>
                                 </div>
@@ -44,7 +44,9 @@
                                 <nav class="navbar bg-light">
                                     <form class="container-fluid">
                                       <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon1">&#x1F50E;&#xFE0E;</span>
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
                                         <input type="search" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                                       </div>
                                     </form>
@@ -54,7 +56,7 @@
                             <div class="users-list">
                                 <div class="other-user d-flex">
                                     <div class="other-user-left">
-                                        <div class="other-user_img ms-1 d-flex align-items-center">
+                                        <div class="other-user_pic ms-1 d-flex align-items-center">
                                             <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
                                         </div>
                                     </div>
@@ -70,7 +72,27 @@
                         </div>
                     </div>
                     <div class="col-8">
-                        <div class="blue">destra</div>
+                        <!--Questo div conterrà tutta la sezione chat-->
+                        <div class="chat-section">
+                            <!--div dedicato all'interlocutore-->
+                            <div class="interlocutor d-flex">
+                                <div class="interlocutor-left">
+                                    <!--Questo div conterrà l'immagine profilo dell'utente interlocutore-->
+                                    <div class="interlocutor_pic ms-1 d-flex align-items-center">
+                                        <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
+                                    </div>
+                                </div>
+                                <div class="interlocutor-middle">
+                                    <h6 class="ms-1">Michele</h6>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="interlocutor-right d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

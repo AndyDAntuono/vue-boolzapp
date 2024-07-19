@@ -14,15 +14,15 @@ main {
 	height: 90vh;
 }
 
-.main-user {
+.main-user, .interlocutor {
 	background-color: lightgray;
 }
 
-.users-icons i {
+.users-icons i, .interlocutor-right i {
 	color: dimgray;
 }
 
-.main-user_img img {
+.main-user_pic img {
 	width: 15%;
 }
 
@@ -54,7 +54,7 @@ main {
 	width: 20%;
 }
 
-.other-user_img img {
+.other-user_pic img {
 	width: 70%;
 }
 
@@ -72,6 +72,32 @@ main {
 	color: gray;
 }
 
-.blue {
-	background-color: blue;
+.chat-section {
+	width: 100%;
 }
+
+.interlocutor {
+	width: 100%;
+	border-left: 1px solid gray;
+}
+
+.interlocutor-left {
+	width: 10%;
+}
+
+.interlocutor-pic {
+	width: 10%;
+}
+
+.interlocutor_pic img {
+	width: 90%;
+}
+
+.interlocutor-middle {
+	width: 75%;
+}
+
+.interlocutor-right {
+	width: 15%;
+}
+

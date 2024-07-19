@@ -196,8 +196,11 @@ status: 'received'
 
 /*SOLUZIONE*/
 1 creo per prima cosa una struttura rigida dell'esercizio all'intero di index.html;
-1.2 creo un container che dividerò successivamente in due col. Nella col di sinistra (col-4) creo una sezione dedicata agli utenti e la col di destra conterrà le chat;
-1.2.1 creo un div deicato all'utente principale (Sofia);
-1.2.2 creo un div dedicato alle opzioni riguardanti le notifiche;
-1.2.3 creo un div contenente un barra della ricerca;
-1.2.4 creo un div contenente una lista degli utenti coinvolti nelle chat (tutti tranne Sofia visto che è l'utente che sta "visualizzando" boolzapp);
+2 creo un container che dividerò successivamente in due col. Nella col di sinistra (col-4) creo una sezione dedicata agli utenti e la col di destra conterrà le chat;
+3 nel col di sinistra creo una sezione dedicata agli utenti;
+3.1 creo un div deicato all'utente principale (Sofia);
+3.2 creo un div dedicato alle opzioni riguardanti le notifiche;
+3.3 creo un div contenente un barra della ricerca;
+3.4 creo un div contenente una lista degli utenti coinvolti nelle chat (tutti tranne Sofia visto che è l'utente che sta "visualizzando" boolzapp);
+4 nel col di destra del container principale creo una sezione dedicata alla chat
+4.1 creo div dell'iterlocutore (ho preferito creare un altro div anziché usare div utenti per evitare confusione anche se in questo momento non so come questa mia scelta possa influire sul strutturazione del vue)
