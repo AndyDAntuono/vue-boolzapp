@@ -107,6 +107,10 @@ main {
 	background-image: url(../img/mine.jpg);
 }
 
+.bg-intelocutor {
+	background-color: darkseagreen;
+}
+
 .chat-bottom {
 	width: 100%;
 }
