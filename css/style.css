@@ -32,7 +32,7 @@ main {
 
 .bell-icon {
 	height: 40px;
-	width: 13%;
+	width: 40px;
 }
 
 .bell-icon i {
@@ -103,7 +103,7 @@ main {
 
 .dialogue {
 	/*imposto un altezza fissa SOLO per farmi un idea di quanto spazio dovrà occupare il div dialogue*/
-	height: 500px;
+	height: 800px;
 	background-image: url(../img/mine.jpg);
 }
 

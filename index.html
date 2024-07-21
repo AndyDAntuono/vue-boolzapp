@@ -10,137 +10,135 @@
 </head>
 <body>
     <div id="app">
-        <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex  mt-3 bg-white">
-                        <!--Suddivido il container in due col-->
-                        <div class="col-4">
-                            <!--Nella user section inserirò tutti i div che hann che fare con gli utenti di boolzapp-->
-                            <div class="user-section">
-                                <!--Questo div a che fare con il main-user, ovvero Sofia in questo caso-->
-                                <div class="main-user w-65 py-2 d-flex align-items-center">
-                                    <div class="main-user_pic ms-1 d-flex align-items-center">
-                                        <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
-                                        <h6 class="ms-1">Sofia</h6>
-                                    </div>
-                                    <div class="users-icons w-25 d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-solid fa-circle-notch"></i>
-                                        <i class="fa-solid fa-message"></i>
-                                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex  mt-3 bg-white">
+                    <!--Suddivido il container in due col-->
+                    <div class="col-4">
+                        <!--Nella user section inserirò tutti i div che hann che fare con gli utenti di boolzapp-->
+                        <div class="user-section">
+                            <!--Questo div a che fare con il main-user, ovvero Sofia in questo caso-->
+                            <div class="main-user w-65 py-2 d-flex align-items-center">
+                                <div class="main-user_pic ms-1 d-flex align-items-center">
+                                    <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
+                                    <h6 class="ms-1">Sofia</h6>
                                 </div>
-                                <!--div contenente le opzioni sulle notifiche-->
-                                <div class="notifications py-2 d-flex align-items-center">
-                                    <div class="bell-icon rounded-circle bg-white ms-1 d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-regular fa-bell-slash"></i>
-                                    </div>
-                                    <div class="notifications-text ms-3">
-                                        <h6>Ricevi notifiche di nuovi messaggi</h6>
-                                        <p><a href="">Attiva notifiche desktop</a></p>
-                                    </div>
+                                <div class="users-icons w-25 d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </div>
-                                <!--div contenente la barra della ricerca-->
-                                <div class="src-user">
-                                    <nav class="navbar bg-light">
-                                        <form class="container-fluid">
-                                          <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                            </span>
-                                            <input type="search" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-                                          </div>
-                                        </form>
-                                    </nav>
+                            </div>
+                            <!--div contenente le opzioni sulle notifiche-->
+                            <div class="notifications py-2 d-flex align-items-center">
+                                <div class="bell-icon rounded-circle bg-white ms-1 d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-regular fa-bell-slash"></i>
                                 </div>
-                                <!--div contenente la lista degli altri utenti-->
-                                <div class="users-list">
-                                    <div v-for="(item, index) in contacts" class="other-user d-flex">
-                                        <div class="other-user-left">
-                                            <div class="other-user_pic ms-1 d-flex align-items-center">
-                                                <img :src="contacts.avatar" class="rounded-circle" :alt="contacts.name">
-                                            </div>
+                                <div class="notifications-text ms-3">
+                                    <h6>Ricevi notifiche di nuovi messaggi</h6>
+                                    <p><a href="">Attiva notifiche desktop</a></p>
+                                </div>
+                            </div>
+                            <!--div contenente la barra della ricerca-->
+                            <div class="src-user">
+                                <nav class="navbar bg-light">
+                                    <form class="container-fluid">
+                                      <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
+                                        <input type="search" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                      </div>
+                                    </form>
+                                </nav>
+                            </div>
+                            <!--div contenente la lista degli altri utenti-->
+                            <div class="users-list">
+                                <div v-for="(contact, index) in contacts" :key="index" class="other-user d-flex">
+                                    <div class="other-user-left">
+                                        <div class="other-user_pic">
+                                            <img :src="contact.avatar" class="rounded-circle" :alt="contact.name">
                                         </div>
-                                        <div class="other-user-middle">
-                                            <h6 class="ms-1">{{ contacts.name }}</h6>
-                                            <p>{{ contacts.laText }}</p>
-                                        </div>
-                                        <div class="other-user-right">{{ contacts.laHours}}</div>
                                     </div>
+                                    <div class="other-user-middle">
+                                        <h6 class="ms-1">{{ contact.name }}</h6>
+                                        <p>{{ contact.laText }}</p>
+                                    </div>
+                                    <div class="other-user-right me-1">{{ contact.laHours }}</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8">
-                            <!--Questo div conterrà tutta la sezione chat-->
-                            <div class="chat-section">
-                                <!--div dedicato all'interlocutore-->
-                                <div class="interlocutor d-flex">
-                                    <div class="interlocutor-left">
-                                        <!--Questo div conterrà l'immagine profilo dell'utente interlocutore-->
-                                        <div class="interlocutor_pic ms-1 d-flex align-items-center">
-                                            <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
-                                        </div>
-                                    </div>
-                                    <div class="interlocutor-middle">
-                                        <h6 class="ms-1">Michele</h6>
-                                        <p>Ultimo messaggio inviato</p>
-                                    </div>
-                                    <div class="interlocutor-right d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                        <i class="fa-solid fa-paperclip"></i>
-                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="col-8">
+                        <!--Questo div conterrà tutta la sezione chat-->
+                        <div class="chat-section">
+                            <!--div dedicato all'interlocutore-->
+                            <div class="interlocutor d-flex align-items-center py-1">
+                                <div class="interlocutor-left">
+                                    <!--Questo div conterrà l'immagine profilo dell'utente interlocutore-->
+                                    <div class="interlocutor_pic ms-1 d-flex align-items-center">
+                                        <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
                                     </div>
                                 </div>
-                                <!--div dedicato al dialogo tra utetnti-->
-                                <div class="dialogue">
-                                    <div class="col-11 m-auto">
-                                        <div class="row interlocutor-row mb-2">
-                                            <div class="col-3">
-                                                <!--qui dentro ci metto l'immagine profile dell'utente interlocutore-->
-                                                <div class="interlocutor_pic ms-1 d-flex align-items-center">
-                                                    <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
-                                                </div>
-                                            </div>
-                                            <div class="col-9">
-                                                <!--qui dentro ci metto i baloons dell'utente interlocutore-->
-                                                <div class="rounded bg-intelocutor p-1">
-                                                    <p class="m-1">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
-                                                    </p>
-                                                </div>
+                                <div class="interlocutor-middle">
+                                    <h6 class="ms-1">Michele</h6>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                                <div class="interlocutor-right d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                            <!--div dedicato al dialogo tra utetnti-->
+                            <div class="dialogue">
+                                <div class="col-11 m-auto">
+                                    <div class="row interlocutor-row mb-2">
+                                        <div class="col-3">
+                                            <!--qui dentro ci metto l'immagine profile dell'utente interlocutore-->
+                                            <div class="interlocutor_pic ms-1 d-flex align-items-center">
+                                                <img src="./img/avatar_io.jpg" class="rounded-circle" alt="main_user">
                                             </div>
                                         </div>
-                                        <div class="row main-user-row mb-2">
-                                            <div class="col-9 offset-3">
-                                                <!--qui dentro ci metto i baloons dell'utente principale-->
-                                                <div class="rounded bg-white p-1">
-                                                    <p class="m-1">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
-                                                    </p>
-                                                </div>
+                                        <div class="col-9">
+                                            <!--qui dentro ci metto i baloons dell'utente interlocutore-->
+                                            <div class="rounded bg-intelocutor p-1">
+                                                <p class="m-1">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row main-user-row mb-2">
+                                        <div class="col-9 offset-3">
+                                            <!--qui dentro ci metto i baloons dell'utente principale-->
+                                            <div class="rounded bg-white p-1">
+                                                <p class="m-1">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, neque velit delectus laborum similique consectetur. Eos odit, accusantium tempora vel alias assumenda consequuntur eligendi quibusdam voluptates quidem animi esse at.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!--div dedicato all'invio dei messggi da parte del main-user (Sofia)-->
-                                <div class="chat-bottom d-flex justify-content-evenly align-items-center">
-                                    <div class="chat-bottom-left d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-regular fa-face-smile"></i>
-                                    </div>
-                                    <div class="chat-bottom-middle py-1">
-                                        <input class="w-100" type="text" placeholder="Scrivi un messaggio">
-                                    </div>
-                                    <div class="chat-bottom-right d-flex justify-content-evenly align-items-center">
-                                        <i class="fa-solid fa-microphone"></i>
-                                    </div>
+                            </div>
+                            <!--div dedicato all'invio dei messggi da parte del main-user (Sofia)-->
+                            <div class="chat-bottom d-flex justify-content-evenly align-items-center">
+                                <div class="chat-bottom-left d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </div>
+                                <div class="chat-bottom-middle py-1">
+                                    <input class="w-100" type="text" placeholder="Scrivi un messaggio">
+                                </div>
+                                <div class="chat-bottom-right d-flex justify-content-evenly align-items-center">
+                                    <i class="fa-solid fa-microphone"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
     
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
