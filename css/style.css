@@ -101,15 +101,38 @@ main {
 	width: 15%;
 }
 
-.dialogue {
+.messages {
 	/*imposto un altezza fissa SOLO per farmi un idea di quanto spazio dovrà occupare il div dialogue*/
 	height: 800px;
 	background-image: url(../img/mine.jpg);
+	display: flex;
+    flex-direction: column;
 }
 
-.bg-intelocutor {
-	background-color: darkseagreen;
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 60%;
 }
+
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 60%;
+}
+
+.sent span, .received span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
 
 .chat-bottom {
 	width: 100%;
