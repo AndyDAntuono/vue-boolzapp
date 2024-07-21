@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             <!--div dedicato al dialogo tra utetnti-->
-                            <div class="messages">
+                            <div class="messages" v-if="activeContact !== null">
                                 <!-- Itera attraverso i messaggi del contatto selezionato -->
                                 <div v-for="(message, index) in contacts[activeContact].messages" :key="index" :class="message.status">
                                     <!-- Testo del messaggio -->
