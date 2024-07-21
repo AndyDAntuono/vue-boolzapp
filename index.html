@@ -55,7 +55,7 @@
                             <!--div contenente la lista degli altri utenti-->
                             <div class="users-list">
                                 <!--Imposto un v-for che crea un elemento nuovo tanti quanti gli oggetti dell'array "contatcs""-->
-                                <div v-for="(contact, index) in contacts" :key="index" class="other-user d-flex">
+                                <div v-for="(contact, index) in contacts" :key="index" @click="selectContact(index)" class="{ active: activeContact === index } other-user d-flex">
                                     <div class="other-user-left">
                                         <div class="other-user_pic">
                                             <img :src="contact.avatar" class="rounded-circle" :alt="contact.name">
@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                                 <div class="interlocutor-middle">
-                                    <h6 class="ms-1">{{ contacts[activeContact].name }}/h6>
+                                    <h6 class="ms-1">{{ contacts[activeContact].name }}</h6>
                                     <p>{{ contacts[activeContact].laText }}</p>
                                 </div>
                                 <div class="interlocutor-right d-flex justify-content-evenly align-items-center">
