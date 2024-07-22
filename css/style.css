@@ -109,6 +109,14 @@ main {
     flex-direction: column;
 }
 
+.messagge_pic {
+	width: 10%;
+}
+
+.messagge_pic img {
+	width: 90%;
+}
+
 .sent {
     align-self: flex-end;
     background-color: #dcf8c6;
