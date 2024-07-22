@@ -50,6 +50,19 @@ main {
 	border-bottom: 1px solid gray;
 }
 
+.other-user:hover {
+	background-color: lightgray;
+}
+
+.other-user:active {
+	background-color: dimgray;
+	color: white;
+}
+
+.other-user p:active {
+	color: white;
+}
+
 .other-user-left {
 	width: 20%;
 }
@@ -109,10 +122,11 @@ main {
     flex-direction: column;
 }
 
-
+/*
 .messages img {
 	width: 10%;
 }
+*/
 
 .sent {
     align-self: flex-end;

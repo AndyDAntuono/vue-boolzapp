@@ -95,7 +95,9 @@
                             <div class="messages" v-if="activeContact !== null">
                                 <!-- Itera attraverso i messaggi del contatto selezionato -->
                                 <div v-for="(message, index) in contacts[activeContact].messages" :key="index" :class="message.status">
+                                    <!-- commento il div seguente perché volevo mostrare l'avatar dell'interlocutore, ma poi mi sono reso conto che ciò ha senso se il contatto selezionato fosse un GRUPPO whatsapp!
                                     <img v-if="message.status === 'received'" :src="contacts[activeContact].avatar" class="rounded-circle d-inline" alt="Avatar">
+                                    -->
                                     <!-- Testo del messaggio -->
                                     <p class="d-inline ms-1">{{ message.message }}</p>
                                     <!-- Data del messaggio -->

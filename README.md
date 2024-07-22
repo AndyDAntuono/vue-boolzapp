@@ -208,3 +208,11 @@ status: 'received'
 4.3 creo un div che conterrà l'editor(?) dei messaggi eseguibili dall'utente principale;
 5 conclusa la replica grafica richiesta dall'esercizio, imposto un v-for da inserire nel div che contiene i contatti. Il v-for itera i contatti e crea un nuovo elemento in base al numero di oggetti dell'array "contacts" presente nel file script.js;
 5.1 Il v-for applicato all'array di oggetti contacts dovrà ciclare le informazioni contenute nell chiavi degli oggetti. Nel mio caso si tratta di name (nome dell'utente), avatar (immagine profilo dell'utente), laText e laHours (il primo emette un messaggio conscritto "ultimo messaggio inviato" e il secondo specifica a che ora è stato inviato l'ultimo messaggio inviato dall'utente);
+6 Creo a destra sezione contatti la sezione dedicata alla chat;
+6.1 specifico attraverso un v-if che la sezione chat apparirà solo se viene selezionato un contatto;
+6.2 all'interno della chat creo un div che mostri con quale contatto stia parlando l'utente principale, mostrando ad esempio l'immagine profilo del contatto selezionato;
+6.3 sotto al div precedente ne creo un altro conterrà la chat vera e propria tra utenti. Anche questo si mostrerà solo se viene effetivamente selezionato un contatto;
+6.3.1 ciclo con v-for i messaggi contenuti dell'array di oggetti "messages" (che a sua volta è collacato nell'array di oggetti "contacts");
+6.3.2 imposto attraverso un apposita classe css (.received) che se il messaggio corrisponde a status.received, il colore di background che opsita tale messaggio si colori di verde;
+6.3.3 (aggiunta personale) Se il cursore si trova sopra ad uno dei contatti (hover), il colore di background del contatto si colora di grigio chiaro;
+6.3.4 (aggiunta personale) Se l'utente clicca uno dei contatti (active), il colore di background del contatto si colora di grigio scuro e il testo di colora di bianco (non funziona su tutti contatti, non so il perché);
