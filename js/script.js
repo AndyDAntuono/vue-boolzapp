@@ -186,7 +186,8 @@ createApp({
                 
             ],
             // Indice del contatto attivo (selezionato), inizialmente null
-            activeContact: null
+            activeContact: null,
+            newMessage: ''
         };
     },
     methods: {
@@ -196,12 +197,13 @@ createApp({
         },
         // Metodo per inviare un messaggio da parte dall'utente principale (Sofia)
         sendMessage() {
-            if (this.newMessage !== '') {
+            if (this.newMessage.trim() !== '') {
                 const msg = {
+                    date: new Date().toLocaleString(),
                     message: this.newMessage,
                     status: 'sent',
                 };
-                this.contacts[this.activeContact].messages.push(message);
+                this.contacts[this.activeContact].messages.push(msg);
                 this.newMessage = '';
             }
         }
