@@ -116,7 +116,7 @@ main {
 
 .messages {
 	/*imposto un altezza fissa SOLO per farmi un idea di quanto spazio dovrà occupare il div dialogue*/
-	height: 800px;
+	height: 700px;
 	background-image: url(../img/mine.jpg);
 	display: flex;
     flex-direction: column;

@@ -197,6 +197,7 @@ createApp({
         },
         // Metodo per inviare un messaggio da parte dall'utente principale (Sofia)
         sendMessage() {
+            //
             if (this.newMessage.trim() !== '') {
                 const msg = {
                     date: new Date().toLocaleString(),
@@ -205,6 +206,16 @@ createApp({
                 };
                 this.contacts[this.activeContact].messages.push(msg);
                 this.newMessage = '';
+
+                // imposto un timer che duri 1 secondo, e al suo scadere viene generata una risposta da parte dell'interlocutore che recita semplicemente "ok"
+                setTimeout(() => {
+                    const reply = {
+                        date: new Date().toLocaleString(),
+                        message: 'ok',
+                        status: 'received'
+                    };
+                    this.contacts[this.activeContact].messages.push(reply);
+                }, 1000);
             }
         }
     },
