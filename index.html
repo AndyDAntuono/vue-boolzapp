@@ -110,7 +110,7 @@
                                     <i class="fa-regular fa-face-smile"></i>
                                 </div>
                                 <div class="chat-bottom-middle py-1">
-                                    <input class="w-100" type="text" placeholder="Scrivi un messaggio">
+                                    <input class="w-100" type="text"  v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
                                 </div>
                                 <div class="chat-bottom-right d-flex justify-content-evenly align-items-center">
                                     <i class="fa-solid fa-microphone"></i>

@@ -213,6 +213,6 @@ status: 'received'
 6.2 all'interno della chat creo un div che mostri con quale contatto stia parlando l'utente principale, mostrando ad esempio l'immagine profilo del contatto selezionato;
 6.3 sotto al div precedente ne creo un altro conterrà la chat vera e propria tra utenti. Anche questo si mostrerà solo se viene effetivamente selezionato un contatto;
 6.3.1 ciclo con v-for i messaggi contenuti dell'array di oggetti "messages" (che a sua volta è collacato nell'array di oggetti "contacts");
-6.3.2 imposto attraverso un apposita classe css (.received) che se il messaggio corrisponde a status.received, il colore di background che opsita tale messaggio si colori di verde;
+6.3.2 imposto attraverso un apposita classe css (.sent) che se il messaggio corrisponde a status.sent, il colore di background che opsita tale messaggio si colori di verde;
 6.3.3 (aggiunta personale) Se il cursore si trova sopra ad uno dei contatti (hover), il colore di background del contatto si colora di grigio chiaro;
 6.3.4 (aggiunta personale) Se l'utente clicca uno dei contatti (active), il colore di background del contatto si colora di grigio scuro e il testo di colora di bianco (non funziona su tutti contatti, non so il perché);

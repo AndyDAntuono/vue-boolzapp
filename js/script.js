@@ -193,6 +193,17 @@ createApp({
         // Metodo per selezionare un contatto e impostarlo come attivo
         selectContact(index) {
             this.activeContact = index;
+        },
+        // Metodo per inviare un messaggio da parte dall'utente principale (Sofia)
+        sendMessage() {
+            if (this.newMessage !== '') {
+                const msg = {
+                    message: this.newMessage,
+                    status: 'sent',
+                };
+                this.contacts[this.activeContact].messages.push(message);
+                this.newMessage = '';
+            }
         }
     },
     mounted() {
