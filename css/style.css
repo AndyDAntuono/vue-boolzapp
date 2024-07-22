@@ -109,12 +109,9 @@ main {
     flex-direction: column;
 }
 
-.messagge_pic {
-	width: 10%;
-}
 
-.messagge_pic img {
-	width: 90%;
+.messages img {
+	width: 10%;
 }
 
 .sent {

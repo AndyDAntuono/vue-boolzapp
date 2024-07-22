@@ -95,11 +95,9 @@
                             <div class="messages" v-if="activeContact !== null">
                                 <!-- Itera attraverso i messaggi del contatto selezionato -->
                                 <div v-for="(message, index) in contacts[activeContact].messages" :key="index" :class="message.status">
-                                    <div v-if="message.status === 'received'" class="messagge_pic ms-1 d-flex align-items-center">
-                                        <img :src="contacts[activeContact].avatar" class="rounded-circle" alt="Avatar">
-                                    </div>
+                                    <img v-if="message.status === 'received'" :src="contacts[activeContact].avatar" class="rounded-circle d-inline" alt="Avatar">
                                     <!-- Testo del messaggio -->
-                                    <p>{{ message.message }}</p>
+                                    <p class="d-inline ms-1">{{ message.message }}</p>
                                     <!-- Data del messaggio -->
                                     <span>{{ message.date }}</span>
                                 </div>
