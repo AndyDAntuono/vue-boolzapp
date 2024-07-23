@@ -55,7 +55,7 @@
                             <!--div contenente la lista degli altri utenti-->
                             <div class="users-list">
                                 <!--Imposto un v-for che crea un elemento nuovo tanti quanti gli oggetti dell'array "contatcs""-->
-                                <div v-for="(contact, index) in contacts" :key="index" @click="selectContact(index)" class="{ active: activeContact === index } other-user d-flex">
+                                <div v-for="(contact, index) in filterContacts()" :key="index" @click="selectContact(index)" class="{ active: activeContact === index } other-user d-flex">
                                     <div class="other-user-left">
                                         <div class="other-user_pic">
                                             <img :src="contact.avatar" class="rounded-circle" :alt="contact.name">
