@@ -187,7 +187,8 @@ createApp({
             ],
             // Indice del contatto attivo (selezionato), inizialmente null
             activeContact: null,
-            newMessage: ''
+            newMessage: '',
+            searchContact: '',
         };
     },
     methods: {
@@ -217,7 +218,14 @@ createApp({
                     this.contacts[this.activeContact].messages.push(reply);
                 }, 1000);
             }
-        }
+        },
+        //Metodo per filtrare i contatti
+        filterContacts() {
+            const searchLower = this.searchContact.toLowerCase();
+            this.contacts.forEach(contact => {
+                contact.visible = contact.name.toLowerCase().includes(searchLower);
+            });
+        },
     },
     mounted() {
         console.log(this.contacts);

@@ -219,3 +219,6 @@ status: 'received'
 7 nell'editor dei messaggi del punto 4.3 aggiungo una direttiva v.model che collegherà l'input ad una proprietà, che chiamerò newMessage, nel vue.js
 7.1 sempre nell'editor, aggiungo @keyup.enter"sendMessage" accanto al v-model di prima. In questo modo l'utente potrà digitare il messaggio compilato nel campo input premendo il tasto "enter" (o "invio") della propria tastiera;
 7.2 nel vue aggiungo un nuovo metodo, sendMessage il quale avrà il compito di aggiungere un nuovo mesaggio, che si aggiungerà all'array degli altri messaggi. Per completezza faccio in modo che data ed ora del nuovo messaggio siano aggiornate;
+8 Imposto un v-model nel div che contiene la barra della ricerca;
+8.1 Nel htnml, applico un v-mode all'input responsabile delle ricerca e collego al metodo filterContacts
+8.2 Nel vue.js il metodo filterContacts avrà il compito di filtrare gli input dell'utente e confrontarli con i nomi dei contatti
