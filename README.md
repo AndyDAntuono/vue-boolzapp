@@ -202,9 +202,9 @@ status: 'received'
 3.2 creo un div dedicato alle opzioni riguardanti le notifiche;
 3.3 creo un div contenente un barra della ricerca;
 3.4 creo un div contenente una lista degli utenti coinvolti nelle chat (tutti tranne Sofia visto che è l'utente che sta "visualizzando" boolzapp);
-4 nel col di destra del container principale creo una sezione dedicata alla chat
+4 nel col di destra del container principale creo una sezione dedicata alla chat (a cui darò un altezza fissa visto che anche sul whatsapp originale il contenitore della chat sembra poessedere una proprietà simile)
 4.1 creo div dell'iterlocutore (ho preferito creare un altro div anziché usare div utenti per evitare confusione anche se in questo momento non so come questa mia scelta possa influire sul strutturazione del vue);
-4.2 creo um div che conterrà il dialogo tra l'utente principale e gli atri utenti
+4.2 creo um div che conterrà il dialogo tra l'utente principale e gli atri utenti (questa sezione la farò diventare "scrollabile" visto che il nummero dei messaggi può essere infinito);
 4.3 creo un div che conterrà l'editor(?) dei messaggi eseguibili dall'utente principale;
 5 conclusa la replica grafica richiesta dall'esercizio, imposto un v-for da inserire nel div che contiene i contatti. Il v-for itera i contatti e crea un nuovo elemento in base al numero di oggetti dell'array "contacts" presente nel file script.js;
 5.1 Il v-for applicato all'array di oggetti contacts dovrà ciclare le informazioni contenute nell chiavi degli oggetti. Nel mio caso si tratta di name (nome dell'utente), avatar (immagine profilo dell'utente), laText e laHours (il primo emette un messaggio conscritto "ultimo messaggio inviato" e il secondo specifica a che ora è stato inviato l'ultimo messaggio inviato dall'utente);

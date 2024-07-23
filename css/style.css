@@ -86,7 +86,9 @@ main {
 }
 
 .chat-section {
-	width: 100%;
+	height: 90vh; /* Imposto un'altezza fissa per la sezione della chat */
+	display: flex;
+	flex-direction: column;
 }
 
 .interlocutor {
@@ -115,11 +117,15 @@ main {
 }
 
 .messages {
-	/*imposto un altezza fissa SOLO per farmi un idea di quanto spazio dovrà occupare il div dialogue*/
-	height: 700px;
+	flex-grow: 1;
+	overflow-y: auto;
 	background-image: url(../img/mine.jpg);
 	display: flex;
     flex-direction: column;
+}
+
+.messages p {
+    margin-bottom: 0;
 }
 
 /*
@@ -135,6 +141,7 @@ main {
     border-radius: 10px;
     margin: 5px;
     max-width: 60%;
+	text-align: right;
 }
 
 .received {
@@ -144,6 +151,7 @@ main {
     border-radius: 10px;
     margin: 5px;
     max-width: 60%;
+	text-align: left;
 }
 
 .sent span, .received span {

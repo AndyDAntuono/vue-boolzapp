@@ -186,7 +186,7 @@ createApp({
                 
             ],
             // Indice del contatto attivo (selezionato), inizialmente null
-            activeContact: null,
+            activeContact: 0,
             newMessage: '',
             searchContact: '',
         };
