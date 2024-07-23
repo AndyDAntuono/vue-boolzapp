@@ -222,9 +222,9 @@ createApp({
         //Metodo per filtrare i contatti
         filterContacts() {
             const searchLower = this.searchContact.toLowerCase();
-            this.contacts.forEach(contact => {
-                contact.visible = contact.name.toLowerCase().includes(searchLower);
-            });
+            return this.contacts.filter(contact =>
+                contact.name.toLowerCase().includes(searchLower)
+            );
         },
     },
     mounted() {
